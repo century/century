@@ -7,7 +7,7 @@
 
 <div align="center">
 A rich CSS components for you web application.
-  
+</div>
   
   ## ✨ Features
 
@@ -15,4 +15,4 @@ A rich CSS components for you web application.
 - A set of high-quality CSS components out of the box.
 - Written in SASS / LESS with predictable static types.
 
-</div>
+
