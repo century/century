@@ -13,7 +13,10 @@
     "web"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm-run-all css-*",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/century.scss dist/css/century.css",
+    "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/century.min.css dist/css/century.css",
+    "css-prefix": "postcss --config config/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\""
   },
   "repository": {
     "type": "git",
@@ -29,12 +32,11 @@
     "autoprefixer": "^9.5.1",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^5.2.0",
-    "eslint": "^5.16.0",
-    "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^7.0.16",
-    "stylelint": "^10.0.1",
-    "tar": ">=4.4.2"
-  }
+    "postcss-cli": "^6.1.2",
+    "stylelint": "^10.0.1"
+  },
+  "dependencies": {}
 }
