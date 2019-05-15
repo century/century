@@ -1,0 +1,39 @@
+{
+  "name": "century",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/century/century.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/century/century/issues"
+  },
+  "homepage": "https://github.com/century/century#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-css-cli": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
+    "postcss": "^7.0.16",
+    "stylelint": "^10.0.1"
+  }
+}
