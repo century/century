@@ -1,12 +1,7 @@
-<p align="center">
-  <a href="http://ant.design">
-    <img width="150" src="https://raw.githubusercontent.com/century/century/master/sd.jpeg">
-  </a>
-</p>
 <h1 align="center">Century 💯</h1>
 
 <div align="center">
-A rich CSS components for you web application.
+An enterprise-class css only frameworks and UI Components
 </div>
   
   ## ✨ Features

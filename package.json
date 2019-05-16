@@ -1,7 +1,7 @@
 {
   "name": "century",
   "version": "1.0.0",
-  "description": "",
+  "description": "An enterprise-class css only frameworks and UI Components",
   "main": "index.js",
   "keywords": [
     "css",
@@ -14,18 +14,22 @@
   ],
   "lint-staged": {
     "*.scss": [
-      "npm run prettier",
+      "npm run format",
       "npm run lint",
-      "git add"
+      "git add",
+      "npm run build"
     ]
   },
-  "husky":{
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all  lint pre"
+    }
   },
   "scripts": {
+    "start": "npm run css-compile",
     "build": "npm-run-all css-*",
     "lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
-    "prettier": "prettier  --write 'scss/**/*.{scss}'",
+    "format": "prettier  --write 'scss/**/*.{scss,css}'",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/century.scss dist/css/century.css",
     "css-prefix": "postcss --use autoprefixer --map false --output dist/css/century.css dist/css/century.css",
     "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/century.min.css dist/css/century.css"
