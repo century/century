@@ -16,13 +16,13 @@
     "*.scss": [
       "npm run format",
       "npm run lint",
-      "git add",
-      "npm run build"
+      "npm run build",
+      "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all  lint pre"
+      "pre-commit": "npm-run-all  lint format"
     }
   },
   "scripts": {
