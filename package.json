@@ -35,7 +35,8 @@
     "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/century.min.css dist/css/century.css"
   },
   "contributors": [
-    "Naveen DA <naveenda360@gmail.com>"
+    "Naveen DA <naveenda360@gmail.com>",
+    "Azar ZaZa <azar.career@gmail.com>"
   ],
   "repository": {
     "type": "git",
