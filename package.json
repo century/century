@@ -19,7 +19,7 @@
       "git add"
     ]
   },
-  "gitHooks": {
+  "husky":{
     "pre-commit": "lint-staged"
   },
   "scripts": {
