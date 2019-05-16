@@ -12,13 +12,27 @@
     "framework",
     "web"
   ],
+  "lint-staged": {
+    "*.scss": [
+      "npm run prettier",
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "scripts": {
     "build": "npm-run-all css-*",
-    "lint":"stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
+    "lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
+    "prettier": "prettier  --write 'scss/**/*.{scss}'",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/century.scss dist/css/century.css",
-    "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/century.min.css dist/css/century.css",
-    "css-prefix": "postcss --config config/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\""
+    "css-prefix": "postcss --use autoprefixer --map false --output dist/css/century.css dist/css/century.css",
+    "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/century.min.css dist/css/century.css"
   },
+  "contributors": [
+    "Naveen DA <naveenda360@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/century/century.git"
@@ -32,11 +46,12 @@
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "clean-css-cli": "^4.3.0",
-    "cross-env": "^5.2.0",
+    "husky": "^2.3.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.16",
     "postcss-cli": "^6.1.2",
+    "prettier": "^1.17.1",
     "stylelint": "^10.0.1",
     "stylelint-scss": "^3.6.1"
   },
