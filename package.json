@@ -2,7 +2,9 @@
   "name": "century",
   "version": "1.0.0",
   "description": "An enterprise-class css only frameworks and UI Components",
-  "main": "index.js",
+  "engines": {
+    "node": "<=8.11.3"
+  },
   "keywords": [
     "css",
     "sass",
