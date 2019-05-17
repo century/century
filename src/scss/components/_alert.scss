@@ -1,0 +1,47 @@
+.alert {
+  position: relative;
+  padding: $alert-padding;
+  margin: $alert-margin;
+  border: $alert-border-width solid transparent;
+
+  // Remove the margin bottom of the last alert
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin alert-variant($theme, $name, $color) {
+  @if ($theme == "material") {
+    box-shadow: $material-box-shadow;
+    border-radius: $material-border-radius;
+    background: $color;
+    color: #ffffff;
+  } @else if($theme == "classic") {
+    background: lighten($color, 30);
+    border-radius: $classic-border-radius;
+    color: darken($color, 20);
+    border-color: darken($color, 12);
+  } @else if($theme == "flat") {
+    background: $color;
+    @if (name == "primary") {
+      color: $global-color;
+      border-color: $global-grey;
+    } @else {
+      color: #ffffff;
+    }
+  } @else if($theme == "smart") {
+    border: 0;
+    border-top: 4px solid $color;
+    box-shadow: $global-medium-box-shadow;
+    background: lighten($color, 30);
+    color: darken($color, 30);
+  }
+}
+
+@each $theme in $themes {
+  @each $name, $value in $colors {
+    .#{$theme}.alert-#{$name} {
+      @include alert-variant($theme, $name, $value);
+    }
+  }
+}

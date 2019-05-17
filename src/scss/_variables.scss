@@ -1,0 +1,70 @@
+$colors: (
+  primary: #fff,
+  secondary: red,
+  danger: #ff4d4f,
+  warning: yellow,
+  info: #4299e1,
+  default: grey,
+  success: #38b2ac
+);
+
+$themes: flat, material, classic, smart;
+
+$mode: (
+  day: #fff,
+  night: black
+);
+
+/**
+* Global Variables
+*/
+
+/**
+* Material Theme
+*/
+
+$material-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !default;
+$material-border-radius:2px !default;
+
+/**
+* Classic Theme
+*/ 
+$classic-border-radius:5px !default;
+
+// Promixity
+$global-margin: 20px !default;
+$global-padding: 12px !default;
+
+// font 
+$global-font-size: 16px !default;
+$global-big-font-size: 0.875rem !default;
+$global-medium-font-size: 0.875rem !default;
+$global-small-font-size: 0.875rem !default;
+
+$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+
+// background
+$global-background: #fff !default;
+
+// color
+$global-color: #666 !default;
+$global-link-color: #1e87f0 !default;
+$global-grey: #dedede;
+
+// box shadow
+$global-small-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !default;
+$global-medium-box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06) !default;
+$global-large-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16) !default;
+$global-xlarge-box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16) !default;
+
+// line height
+
+$global-line-height: 1.5 !default;
+
+/**
+* Alert Background
+*/
+$alert-margin: $global-margin !default;
+$alert-padding: $global-padding !default;
+$alert-border-width:2px !default;
